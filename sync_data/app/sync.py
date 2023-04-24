@@ -76,6 +76,7 @@ def get_monitoring_and_update(instance,
         parser_err_number = 0
         # 解析该页媒体的每个url
         for url in url_list:
+            print(url)
 
             if count_num == monitoring_info[0] and monitoring_info[1] is False:
                 log_detail.info("【DouBan】- 其他媒体不在监控时间内，结束导入")

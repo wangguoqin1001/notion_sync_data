@@ -100,11 +100,14 @@ def get_monitoring_and_update(instance,
                 now_status = "在玩"
             elif media_status == MediaStatus.COLLECT.value and media_type == MediaType.GAME.value:
                 now_status = "玩过"
+            print(now_status)
 
             # 查询数据库中是否存在该媒体，通过检索url唯一值
             notion_media_status, old_data_json = get_notion_media_status(token=token,
                                                                          database_id=database_id,
                                                                          media_url=url)
+            print(notion_media_status)
+            print(old_data_json)
             # 随机休眠0-1秒钟，访问notion（应该可以不用延迟，还没有细看notion接口）
             time_number = random.random()
             log_detail.debug(f"【RUN】- notion随机访问休眠时间0-1s，本次休眠：{time_number}s")

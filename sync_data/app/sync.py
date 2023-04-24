@@ -56,7 +56,6 @@ def get_monitoring_and_update(instance,
                                            media_status=media_status,
                                            start_number=start_number)
         log_detail.info(f"【DouBan】访问{media_type}中标记为{media_status}的状态第{page_number}页数据完成")
-        print(html_text)
 
         # 创建一个解析实例
         info_instance = ParserHtmlText(html_text)

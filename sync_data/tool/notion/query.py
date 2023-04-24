@@ -34,7 +34,6 @@ def query_db_data(token, database_id, media_url):
     headers = base.get_headers()
     req = RequestUtils()
     res = req.post(url=api_url, headers=headers, params=params)
-    print(res)
     return res.json()
 
 
